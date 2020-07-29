@@ -29,7 +29,7 @@ public class werm extends CordovaPlugin {
     }
 
     private void wermRun(String command, CallbackContext callbackContext) {
-        if (message != null && command.length() > 0) {
+        if (command != null && command.length() > 0) {
 	        StringBuffer return_ = new StringBuffer();
         	try {
 		     Process p = Runtime.getRuntime().exec(command);
