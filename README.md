@@ -11,14 +11,14 @@ else install it with `npm install -g cordova`.
 
 Navigate to the cordova project directory and run the following command
 
-`cordova plugin add https://github.com/CypherpunkArmoury/cordova-werm.git`
+```cordova plugin add https://github.com/CypherpunkArmoury/cordova-werm.git```
 
 
 # Using the plugin in app
 You can access the methods from werm object.
 Here is an example that calls the `wermRun` method and displays a javascript alert.
 
-`werm.wermRun(input.value, alert, alert);`
+```werm.wermRun(input.value, alert, alert);```
 
 A [index.html](https://github.com/CypherpunkArmoury/cordova-werm/blob/master/index.html) has been included as sample
 
@@ -31,5 +31,3 @@ Feel free to request features and updates.
 
 # Credits
 Apache Cordova for [Cordova](https://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html) and [PlugMan](https://www.npmjs.com/package/plugman)
-
-This StackOverflow Answer.
