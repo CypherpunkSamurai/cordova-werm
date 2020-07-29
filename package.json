@@ -1,0 +1,25 @@
+{
+  "name": "com.cordova.werm",
+  "version": "1.0.0",
+  "description": "A WebTerminal",
+  "cordova": {
+    "id": "com.cordova.werm",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CypherpunkArmoury/cordova-werm.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "CypherpunkArmoury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CypherpunkArmoury/cordova-werm/issues"
+  },
+  "homepage": "https://github.com/CypherpunkArmoury/cordova-werm#readme"
+}
