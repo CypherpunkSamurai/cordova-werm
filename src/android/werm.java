@@ -4,7 +4,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
 import android.app.*;
-import android.os.*;
+//import android.os.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
