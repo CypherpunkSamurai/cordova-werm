@@ -1,5 +1,7 @@
-var exec = require('cordova/exec');
 
-exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'werm', 'wermRun', [arg0]);
+window.werm = {
+  wermRun: function (name, onSuccess, onFail) {
+    cordova.exec(onSuccess, onFail, "werm", "wermRun", [name]);
+  }
 };
+
