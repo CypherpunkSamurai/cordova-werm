@@ -3,6 +3,12 @@ package com.cordova.werm;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
+import android.app.*;
+import android.os.*;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,11 +28,31 @@ public class werm extends CordovaPlugin {
         return false;
     }
 
-    private void wermRun(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
+    private void wermRun(String command, CallbackContext callbackContext) {
+        if (message != null && command.length() > 0) {
+	        StringBuffer return_ = new StringBuffer();
+        	try {
+		     Process p = Runtime.getRuntime().exec(command);
+		     p.waitFor();
+		     BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		     String str = "";
+		     while (true) {
+			     str = reader.readLine();
+			     if (str == null) {
+				     break;
+			     }
+			     return_.append(str + "\n");
+		     }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// 
+		callbackContext.success(return_.toString());
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
+
     }
+
+
 }
