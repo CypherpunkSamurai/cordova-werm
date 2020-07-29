@@ -8,7 +8,9 @@ Make sure cordova cli is installed else install it with `npm install -g cordova`
 
 # Using the plugin in app
 You can access the methods from werm object. Here is an example that calls the 'wermRun' method and displays a javascript alert.
-'werm.wermRun(input.value, alert, alert);'
+`werm.wermRun(input.value, alert, alert);`
+
+A index.html has been included as sample
 
 # About
 This plugin was created by [CypherpunkArmoury](https://github.com/CypherpunkArmoury) / a.k.a. [Scratch171](https://github.com/scratchie171)( for [Acode-Editor](https://play.google.com/store/apps/details?id=com.foxdebug.acode) (by [foxdebug](https://github.com/foxdebug/) a.k.a [deadlyjack](https://github.com/deadlyjack)) for running shell commands on android devices.
